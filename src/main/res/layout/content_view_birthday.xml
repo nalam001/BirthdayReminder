@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.alam.birthdayreminder.ViewBirthdayActivity"
+    tools:showIn="@layout/activity_view_birthday">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/send_sms"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_above="@+id/birthday"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrimary"
+                android:onClick="sendSms" />
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingTop="10dp"
+                android:text="@string/add_birthday_date"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/show_noti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/birthday"
+                android:checked="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingTop="20dp"
+                android:text="Show Notification"
+                android:textColor="#757575"
+                android:textColorLink="#000000"
+                android:textSize="18sp"
+                android:thumbTint="#DD000000" />
+
+            <TextView
+                android:id="@+id/bithday_count"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/show_noti"
+                android:paddingTop="20dp"
+                android:text="@string/birthday_countdown"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/countdown_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bithday_count">
+
+                <TextView
+                    android:id="@+id/countdown_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="47" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/day"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/countdown_hour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="47" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hour"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/countdown_minute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="47" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/minute"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/countdown_second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="47" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/second"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ago_or_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countdown_linear"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="ago" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF0000</color>
+    <color name="colorPrimaryDark">#FF0000</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="tab_color">#A8A19E</color>
+    <color name="tab_selected_color">#FFFFFF</color>
+
+    <color name="circle_icon">#efdfd8</color>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_birthday_name"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/add_birthday_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/add_birthday_date"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/birthday_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:onClick="showDatePickerDialog" />
+
+    <Switch
+        android:id="@+id/show_noti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:paddingTop="10dp"
+        android:text="Show Notification"
+        android:textColor="#757575"
+        android:textColorLink="#000000"
+        android:textSize="18sp"
+        android:thumbTint="#000000" />
+
+</LinearLayout>

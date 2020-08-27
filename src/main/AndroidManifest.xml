@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alam.birthdayreminder">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name="com.alam.birthdayreminder.NotiReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.alam.birthdayreminder.NotifyIntentService"
+            android:exported="false" />
+        <activity
+            android:name="com.alam.birthdayreminder.AddBirthdayActivity"
+            android:label="@string/title_activity_add_birthday"
+            android:parentActivityName="com.alam.birthdayreminder.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.alam.birthdayreminder.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alam.birthdayreminder.ViewBirthdayActivity"
+            android:label="@string/title_activity_view_birthday"
+            android:parentActivityName="com.alam.birthdayreminder.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.alam.birthdayreminder.EditBirthdayActivity"
+            android:label="@string/title_activity_edit_birthday"
+            android:parentActivityName="com.alam.birthdayreminder.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.alam.birthdayreminder.TodayBirthdayActivity" />
+    </application>
+</manifest>
+
+
+
+
+
+
